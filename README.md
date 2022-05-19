@@ -162,3 +162,34 @@ $ python manage.py runserver
 ]
 ```
 
+## Suggestions
+
+1- In the project proposed model structure: 
+
+### Vehicle
+| vehicle_id    | PK        |
+|:------------- | :---------|
+| vehicle_plate | CharField |
+
+### Navigation Record
+| id            | PK           |
+|:------------- | :----------- |
+| vehicle_id    | FK           |
+| datetime      | DatetimField |
+| latitude      | FloatField   |
+| longitude     | FloatField   |
+| latest        | BooleanField |
+
+Instead of searhing max_date for each vehicle, usage of latest column might be effective. In the case of adding new navigation record, first we need to update latest column of the last record to 0 and then the new record must be added to table with "latest=1" (check AddNavRecordView). So, we can filter all last points with latest=1 argument (check LastPointsView).
+
+2- In-memory databases like Redis to achieve higher performance.
+
+3- GeoDjango can be used to make geo-spatial analysis, queries and manipulation for location-based data
+
+
+
+
+
+
+
+
