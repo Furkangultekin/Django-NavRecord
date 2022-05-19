@@ -10,7 +10,7 @@ It is a basic django backend project named NavigationRecord  that keeps vehicles
 
 ## Project Set-up
 
-After download the project, run the commands below in order in the project folder:
+After downloading the project, run the commands below in the project folder, respectively:
 ```
 $ python -m venv venv
 ```
