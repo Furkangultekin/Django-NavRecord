@@ -136,7 +136,7 @@ $ python manage.py runserver
     }
 ]
 ```
-### List last navigation record of each vehicle:
+### Listing last navigation record of each vehicle:
 #### -GET /vehicle/last_nav_record
 ##### Results:
 ```
@@ -180,11 +180,13 @@ $ python manage.py runserver
 | longitude     | FloatField   |
 | latest        | BooleanField |
 
-Instead of searhing max_date for each vehicle, usage of latest column might be effective. In the case of adding new navigation record, first we need to update latest column of the last record to 0 and then the new record must be added to table with "latest=1" (check AddNavRecordView). So, we can filter all last points with latest=1 argument (check LastPointsView).
+Instead of searhing max_date for each vehicle, usage of latest column might be effective. In the case of adding new navigation record, first we need to update latest column of the last record of the vehicle to 0 and then the new record must be added to table with "latest=1" (check AddNavRecordView). So, we can filter all last points with latest=1 argument (check LastPointsView). In this way, only one connection to the database is established in a view.
 
-2- In-memory databases like Redis to achieve higher performance.
+2- Adding index concurrently.
 
-3- GeoDjango can be used to make geo-spatial analysis, queries and manipulation for location-based data
+3- In-memory databases like Redis to achieve higher performance.
+
+4- GeoDjango can be used to make geo-spatial analysis, queries and manipulation for location-based data
 
 
 
