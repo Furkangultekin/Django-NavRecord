@@ -2,6 +2,12 @@
 
 It is a basic django backend project named NavigationRecord  that keeps vehicles and their locations.
 
+## README Table of Content
+- Project Set-up
+- Django Application
+- REST api requests and responses
+- Suggestions
+
 ## Project Set-up
 
 After download the project, run the commands below in order in the project folder:
@@ -19,7 +25,7 @@ $ python manage.py runserver
   The project named NavigationRecord includes following app:
   - vehicle : It is includes two models; NavRecord and Vehicle. Add, Get and Update operations can be applied to them.
 
-## REST api requests and response:
+## REST api requests and responses:
 ### Add new vehicle: 
 #### -POST /vehicle/add_vehicle
 ##### Request:
