@@ -27,8 +27,8 @@ $ python manage.py runserver
 
 ## REST api requests and responses:
 ### Add new vehicle: 
-#### -POST /vehicle/add_vehicle
-##### Request:
+#### request: POST /vehicle/add_vehicle
+##### body:
 ```
 {
     "vehicle_id": 1,
@@ -37,8 +37,8 @@ $ python manage.py runserver
 ```
 
 ### Get all vehicles:
-#### -GET /vehicle/get_vehicle
-##### Results:
+#### request: GET /vehicle/get_vehicle
+##### responses:
 ```
 [
     {
@@ -57,15 +57,15 @@ $ python manage.py runserver
 ```
 
 ### Update a vehicle:
-#### -POST /vehicle/update_vehicle
-##### Request:
+#### request: POST /vehicle/update_vehicle
+##### body:
 ```
 {
     "vehicle_id": 3,
     "vehicle_plate":"06 TTT 777"
 }
 ```
-##### Result:
+##### response:
 ```
 {
     "vehicle_id": 3,
@@ -75,8 +75,8 @@ $ python manage.py runserver
 
 
 ### Add new navigation record:
-#### -POST /vehicle/add_nav_record
-##### Request:
+#### request: POST /vehicle/add_nav_record
+##### request:
 ```
 {
     "vehicle":2,
@@ -84,7 +84,7 @@ $ python manage.py runserver
     "longitude":35.00
 }
 ```
-#### Result:
+#### response:
 ```
 {
     "vehicle": 2,
@@ -94,8 +94,8 @@ $ python manage.py runserver
 }
 ```
 ### Get all navigation Records:
-#### -GET /vehicle/get_nav_record
-##### Results:
+#### request: GET /vehicle/get_nav_record
+##### responses:
 ```
 [
     {
@@ -137,8 +137,8 @@ $ python manage.py runserver
 ]
 ```
 ### Listing last navigation record of each vehicle:
-#### -GET /vehicle/last_nav_record
-##### Results:
+#### request: GET /vehicle/last_nav_record
+##### responses:
 ```
 [
     {
